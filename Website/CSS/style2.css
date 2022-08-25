@@ -1,0 +1,45 @@
+.Main-content{
+    color: wheat;
+    width: 83%;
+    height: auto;
+    background-color: rgb(44, 44, 44);
+    margin-bottom: 2%;
+    overflow: hidden;
+    text-align: center;
+}
+.Main-content p {
+    text-align: left;
+    padding: 1%;
+}
+
+.Main-content h1 { 
+    text-align: center;
+    
+}
+.text { 
+    text-align: left;
+    padding: 1%;
+}
+ h3 { 
+    color:blue;
+    text-decoration: underline;
+    text-align: left;
+    padding: 1%;
+}
+ h4 { 
+    color:lightblue;
+    text-decoration: underline;
+    text-align: left;
+    padding: 1%;
+}
+
+b{
+    color:blueviolet;
+}
+
+ul {
+    list-style-type: circle;
+    text-align: left;
+}
+
+

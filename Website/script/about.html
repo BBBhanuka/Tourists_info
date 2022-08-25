@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "menu.css">
+<script src="vue.js"></script>
+<style> 
+
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+
+<h1> Customer Details</h1>
+
+First Name:
+<input type ="text" name="fnme" id="fname" placeholder ="Enter First Name">
+Last Name:
+<input type ="text" name="lnme" id="lname" placeholder ="Enter Last Name">
+Address:
+<input type ="text" name="naddress" id="address" placeholder ="Enter Address">
+
+
+
+
+
+<button @click="Add">Add</button>
+<table>
+<tr>
+<td v-for="Fname  in Fname"> {{ Fname }}</td>
+<td> </td>
+<td> </td>
+</tr>
+</table>
+
+</div>
+
+
+<script>
+var data = new Vue({
+el:'#menu',
+
+data:{
+Fname:['Test','Tst2'],
+Lname:'[''],
+Address:['']
+
+}
+
+
+
+
+
+});
+</script>
+
+
+</body>
+</html>

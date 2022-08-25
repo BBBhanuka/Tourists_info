@@ -1,0 +1,197 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/slider.css">
+<link rel = "stylesheet" type ="text/css" href = "../CSS/mystyle-home.css">
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<script src="../script/photo-slider-info.js"></script>
+
+
+<style>
+
+.photos     {
+                        float:left;
+                        
+            }
+
+.photo-description      {
+                        text-align: center;
+                        color:white; 
+                         }
+
+
+.most-visited       {    
+                        margin: auto;
+                        width: 80%;
+                       
+                        
+                        }
+
+.most-visited .photos   {
+        padding: 10px;
+                        }
+
+.most-visited .photos img{
+                        opacity: 0.6;
+                        
+                        }
+.most-visited .photos img:hover {
+                        opacity: 1;
+                                }
+
+   
+
+</style>
+<title> Wonder of Asia </title>
+</head>
+<body>
+
+<div id ="menu">
+<ul>
+    <li id ="active">Home</li>
+    <li><a href="../Main Pages/tourists.html"> Tourists Information </a></li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US</a></li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US</a> </li>
+</ul>
+
+</div>
+
+<div id="slider">
+    
+    <figure>
+    <img onmouseover = "Photo1()"  onmouseout="Default()" src="../image slider/1.JPG">
+    <img onmouseover = "Photo2()" onmouseout="Default()" src="../image slider/2.jpg" >
+    <img onmouseover = "Photo3()" onmouseout="Default()" src="../image slider/3.JPG" >
+    <img onmouseover = "Photo4()"  onmouseout="Default()" src="../image slider/4.jpg" >
+    <img onmouseover = "Photo5()" onmouseout="Default()" src="../image slider/5.JPG">
+    <img onmouseover = "Photo6()" onmouseout="Default()" src="../image slider/6.JPG">
+    <img onmouseover = "Photo7()"  onmouseout="Default()" src="../image slider/7.JPG">
+    <img onmouseover = "Photo8()" onmouseout="Default()" src="../image slider/8.jpg" >
+    <img onmouseover = "Photo9()" onmouseout="Default()" src="../image slider/9.JPG" >
+    <img onmouseover = "Photo1()"  onmouseout="Default()" src="../image slider/1.JPG">
+    </figure>
+    <div id="slider-info" > </div>
+</div>
+
+
+
+<div id ="General">
+
+
+<h1> General information about Sri Lanka </h1>
+
+
+<p > Democratic Socialist Republic of Sri Lanka, Formaly Known as Ceylon,
+ is a Multi-cultural Country and an island country in South Asia.
+This country has history of more than 2500 years. some more general information as follows </p>
+
+
+<ol type ="1" >
+<li>Ethanics : Sinhalese, Tamil, Muslims, Burghers</li>
+<li>Religions : Buddhism, Christianity, Hinduism, Islam </li>
+<li>Extent : 65,610 sq km </li>
+<li>Official Language : Sinhala </li>
+<li>Capital : Sri Jayawardenapura Kotte</li>
+<li>Population : 21.92 Million</li>
+<li>Administrative divisions : 9 Provinces & 25 Districts </li>
+</ol> 
+
+<table  id ="gen-info">
+<tr>
+
+<td> <img src ="../Img/flag.png" id ="flag" alt ="Sri Lanka National flag" height = "100px"> </td>
+<td> <img src = "../Img/emblem.png" id="government-logo" alt = "Sri Lanka Emblem" height = "100px">  </td>
+</tr>
+<tr>
+<td> <p style="margin-left:230px;">National Flag </p></td>
+<td> Emblem of Sri Lanka </td>
+</tr>
+</table>
+</div>
+
+<div style="position:fixed; top:350px; ">
+<input type = "image" id ="hide-info"  src="../Img/information.gif" style="display:none; width:50%"  " onclick="document.getElementById('General').style.display='none'; document.getElementById('hide-info').style.display='none';document.getElementById('display-info').style.display='block'"/>
+<input type = "image" id ="display-info"  src="../Img/information.gif"  style="width:50%" onclick="document.getElementById('General').style.display='block'; document.getElementById('display-info').style.display='none';document.getElementById('hide-info').style.display='block'"/> 
+</div>
+
+<h1 style="text-align: center; color: chartreuse; font-family: rockwell;"> Most Visited Tourists Destinations in Sri Lanka </h1> 
+
+
+<div class = "most-visited">
+        <div class="photos">
+            <a href="../pages/tourists -sri-dalada-maligawa.html"> <Img src="../img home/1.jpg" height="160px"></a>
+            <div class = "photo-description"> Sri Dalada Maligawa </div>
+        </div>
+
+        <div class="photos">
+            <a href="../pages/tourists -abayagiri-dagoba.html"><img src="../Img home/2.jpg" height="160px" ></a>
+            <div class = "photo-description"> Abhayagiri dagoba  </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -Seema-malaka-temple.html"><img src="../Img home/3.jpg" height="160px" ></a>
+            <div class = "photo-description"> Seema Malaka Temple </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -galle-face-colombo.html"><img src="../Img home/4.jpg" height="160px" ></a>
+            <div class = "photo-description"> Galle Face - Colombo </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -udawalawe-national-park.html"><Img src="../img home/5.jpg" height="160px" ></a>
+            <div class = "photo-description">  Udawalawe National Park </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -yala-national-park.html"><Img src="../img home/6.jpg" height="160px" ></a>
+            <div class = "photo-description"> Yala National Park </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -buddhist-ruins-pollonnaruwa.html"><Img src="../img home/7.jpg" height="160px" ></a>
+            <div class = "photo-description"> Buddhist ruins in Pollonnaruwa</div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -bundala-national-park.html"><Img src="../img home/8.jpg" height="160px" ></a>
+            <div class = "photo-description"> Bundala National Park </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -nine-arch-bridge.html"><Img src="../img home/9.jpg" height="160px" ></a>
+            <div class = "photo-description"> Nine Arch Bridge near Ella </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -hikkaduwa-beach.html"><Img src="../img home/10.jpg" height="160px" ></a>
+            <div class = "photo-description">Hikkaduwa Beach </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -tangalle-beach.html"><Img src="../img home/11.jpg" height="160px" ></a>
+            <div class = "photo-description"> Tangalle Beach</div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -galle-fort.html"><Img src="../img home/12.jpg" height="160px" ></a>
+            <div class = "photo-description"> Aerial view of Galle Fort </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -horton-plains.html"><Img src="../img home/13.jpg" height="160px" ></a>
+            <div class = "photo-description"> Horton Plains & World’s End </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -sigiriya-rock.html"><Img src="../img home/14.jpg" height="160px" ></a>
+            <div class = "photo-description"> Sigiriya Rock </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -sri-pada.html"><Img src="../img home/15.jpg" height="160px" ></a>
+            <div class = "photo-description"> Sri Pada / Adam's Peak </div>
+        </div>
+        <div class="photos">
+            <a href="../pages/tourists -gregory-lake.html"><Img src="../img home/16.jpg" height="160px" ></a>
+            <div class = "photo-description"> Gregory Lake - Nuwara Eliya </div>
+        </div>
+
+</div>
+
+<footer>
+
+    <p>All Rights Reserved. © www.WonderofAsia.lk</p> 
+ 
+ </footer>
+
+</body>
+</html>

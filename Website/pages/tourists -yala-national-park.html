@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Yala National Park</h1>
+
+<img src="../Img home/6.jpg" width="50%">
+
+<p><b>Yala National Park</b> (also known as <b> Ruhuna National Park</b> ) is located in the south eastern region of Sri Lanka and extends over two provinces of Hambantota district of southern province and Monaragala district in Uva province. The entrance to the park is at Palatupana, 12km from Kirinda. The distance from Colombo to the entry point of Palatupana is 305 km. </p>
+<p>The gateway to Yala National Park is Tissamaharama. A 20 km drive via Kirinda takes the visitors to the Palatupana. At Palatupana, the well-designed visitor center provides the information to the tourists and assign a tracker to all incoming vehicles. The park provides jeeps with soft–tops which gives the opportunitiy to view wild life. Dawn and dusk bring about the best timing for Yala Safari tours in the Yala National Park . Being located in one of the arid regions of Sri Lanka, the Climate of Ruhuna National Park is usually hot and dry. The mean annual temperature is 27 Celsius, although in the dry season the temperature could go as high as 37 Celsius. </p>
+<p>The rocky outcrops scattered over the park provides vantage points to enjoy the sprawling areas with Sri Lanka’s dry zone landscape: low scrub and woods. Stillmore, the southern border of the park being the south-eastern coast, the brackish lagoons and dunes enhances the distinctive charm of the Yala National Park. </p>
+<h3>Wildlife</h3>
+<p>Of all the National Parks in Sri Lanka, Yala National Park gives the best opportunity to witness Sri Lanka’s broad variety of wildlife: colorful painted stork in troops are seen perched at the shores of lagoon where the crocodiles too have chosen to doze off; lovely fantailed peacocks in their resplendent blues and greens parade about amidst the woods where monkeys hang, leap and chatter; in the bush jungle are the Elephants; crossing the tracks and wandering off into the thorny scrub jungle is the star attraction of the park: the leopard. </p>
+<p>A total of 32 species of mammals have been recorded. The threatened species include sloth bear (Melursus ursinus), Leopard (Panthera pardus kotiya), elephant (Elephas maximus), water buffalo (Bubalus bubalis), Wild boar (Sus scrofa), spotted deer (Axis axis ceylonessis), sambar (Cervus unicolor) and golden jackal (Canis aureus). </p>
+<h3>Leopards</h3>
+<p>Sri Lankan leopards (Panthera Pardus Kotiya) are said to be a distinct sub-species from their Indian neighbors. Leopards can be seen throughout the park, though best period for enjoying the sights of leopards is during January to July. </p>
+<p>Yala National Park’s Block 1, on the western side of the park, the only one of all five blocks open to the visitors, has recorded the highest density of leopards among the leopard populations scattered in the wildlife parks of Sri Lanka. These magnificent beasts have now much habituated to the encroachment of their domains by the humans in jeeps. Young males don’t betray any sign of disturbance; they seem confident roaming over the gravel roads tracks as well as the bush jungle during the day: the visitors enjoy to no ends, fine photographic opportunities to capture the magnificent beasts well focused at the close range. </p>
+<h3>Elephants</h3>
+<p>Nearby Lunugamvehera National Park serves as a corridor between Yala and Uda Walwe National Park. Yala is home to considerable population of elephants which varies seasonally. Dry season of May to August is the best period to see elephants. </p>
+<h3>Birdlife</h3>
+<p>Yala National Park is rich in birdlife and around 130 species have been recorded.Raptors include crested serpent eagle and white bellied sea eagle. Among the water birds attracted to the lagoons are Lesser Flamingo, Pelicon, Spoonbill, painted stork, rare black necked Stork, grey heron, purple heron, night heron and Darter. </p>
+<p>During the north-east monsoon the lagoons are visited by thousands of migrating waterfowl, including Pintail, Garganey, Eurasian Curlew, Whimbrel and turn stone, which mix with the residents such as whistling duck, Yellow Wattled Lapwing, Red Wattled Lapwig and Great Stone Plover.The forest is home to Orange Breasted Green Pigeon, Hornbills, Flycatchers, including Asian Paradise Flycatcher, Barbets and Orioles. </p>
+<h3>Reptiles</h3>
+<p>Notable reptiles are Mugger Crocodile, which is abundant in the abandoned tanks, Estuarine Crocodile, found in the main rivers, and Common monitor. Other reptiles include Cobra and Russel’s Viper. A variety of Sea Turtle, Olive Ridley and Leatherback, of which Yala coast line is a major nesting ground. </p>
+<h3>Park Gates</h3>
+<ul>
+<li>Katagamuwa Entrance [Gate 1] </li>
+<li>Palatupana Entrance [Gate 2] </li>
+<li>Galge Entrance [Gate 3 and 4] </li>
+</ul>
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

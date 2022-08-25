@@ -1,0 +1,122 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Bundala National Park</h1>
+
+<img src="../Img home/8.jpg" width="50%">
+
+<div class="text">
+<p> 
+Bundala National Park is located 251 km southeast of Colombo, close to the City of Hambantota in the Southern Province of Sri Lanka.
+
+    <h3>Reaching Bundala National Park</h3>
+    
+    Bundala National Park can be reached by A2 main motor road that runs from Colombo to Hambantota
+
+    <h3>Climate at the Bundala National Park</h3>
+    
+    The general climate of Bundala National Park is hot and dry. While the average Temperature is 27 degrees Celsius, the annual rainfall varies between 900mm to 1300mm. Dry season’ falls between May and September.Best time to visit is September to March: during this period migratory birds arrive at the park.
+    
+    Bundala National Park spread an area of 6216 that consists of mainly of dry thorny scrublands, marshes, and four brackish lagoons. The terrain is generally flat with sand dunes bordering the coastline.
+    
+    <h3>Birdlife at the Bundala National Park</h3>
+    
+    Each and every species of waterbird found in Sri Lanka is believed to visit Bundala National Park. Nearly 200 species of birds have been recorded within the park, out of which 58 species are migratory birds.
+    
+    During September and March, hoards of migrants arrive in Bundala; among them are Marsh and Curlew Sandpiper, Curlew and Greenshank Golden and Kentish Plover, Large and Lesser Sandplovers. While the Broad-billed Sandpiper and Red-necked Phalarope are the rare visitors, the most famous migratory bird is the greater flamingo. Hoards of flamingoes are one of the most common sights. In this period over 10,000 shorebirds might be feeding at any one day.
+    
+    The lagoons at the park attract a great variety of aquatic birds: among them are ibis, pelicans, painted storks, Black-necked Stork, terns, gulls, sand-pipers, snipes, teals, egrets, and spoonbills. Endemic birds include the Brown-capped Babbler, Ceylon Woodshrike, and Ceylon Junglefowl.
+    
+    <h3>Mammals at the Bundala National Park</h3>    
+    
+    Bundala is home to 32 species of mammals. Among them are civets, wild boars, Grey & Ruddy mongoose, porcupine, giant Indian palm squirrels, black-naped hares, Spotted Deer, Wild buffalo, the endemic, jackal and fishing & Rusty Spotted cats. While most commonly seen mammals are the hordes of grey langur and Toque Macaque.
+    
+    <h3>Elephants at the Bundala National Park</h3>    
+    
+    Bundala National Park shelters a small population of elephants that varies between 25 and 60 depending on the season.
+    
+    <h3>Amphibians & Reptiles at the Bundala National Park</h3>    
+    
+    Bundala National Park is a habitat for several species of Reptiles. Bundala abounds with estuarine crocodile and mugger crocodile. The coastal area attracts Loggerhead Turtle, Green Turtle, Hawk’s bill turtle, and Olive Ridley: four out of Sri Lanka’s five marine turtle species, which come ashore to lay their eggs Between October and January. Watching egg-laying turtles in the night, on the beaches of Bundala is a sight that no visitor would forget in his lifetime.
+    
+    <h3>Vegetation at the Bundala National Park</h3>    
+    
+    Among the 383 species of plants that have been recorded in Bundala, six are endemic species. Seven are nationally threatened. The prominent species are Weera (Drypetes Sepiaria), Palu( Manikara Hexandra), Satin (Chloroxylon Sweitenia), Kohomba (Azadirachta Indica), and Divul (Limonia acidissima). The dominant scrub is Andara.
+    
+    <h3>Conservation measures proposed at Bundala National Park</h3>    
+    
+    CEA conservation management plan and IUCN’s biodiversity assessment report have proposed several management initiatives for the Bundala National Park. These demand re-demarcation of the boundaries of the park, relocating groups of inhabitants living within the park and arresting the spread of invasive alien species, creating an irrigation structure and management of livestock grazing within the park.</p>
+
+</div>
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

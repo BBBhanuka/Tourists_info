@@ -1,0 +1,103 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../css/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../css/app-todo.css">
+
+<script  src = "../script/vue.js"></script>
+
+<style> 
+
+#district-wise {
+    color:wheat;
+    height: 83%;
+    overflow-y: scroll;
+}
+
+#district-wise ol li { margin-top: 10px;}
+#district-wise ol li:hover { color:yellow; text-decoration: underline;}
+
+
+</style> 
+<title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+<li><a href="../Main Pages/home.html"> Home </a></li>
+<li><a href="../Main Pages/tourists.html"> Tourists Information </a> </li>
+<li id ="active"> Tourists Destinations </li>
+<li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+<li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+<li><a href="../Main Pages/about.html"> About us </a> </li>
+</ul>
+
+</div>
+
+
+
+
+
+<div id="district-wise">
+
+    <h1>District Wise Tourists Destinations</h1>
+
+    <p> You can find tourists Destinations all over the island by district wise from here.</p>
+
+    <h3> Select District from follwing dropdown Menu</h3>
+    <select  v-model="district">
+       <option value="" disabled>Select a District</option>
+       <option v-for="(result ) in dataObj" :value="result">{{ result.name }}</option>
+    </select>
+    
+    <div v-if="district">
+        <p>
+          Selected District : {{district.name}}
+        </p>
+        <ol>
+           <li v-for="(locations, i) in district.locations">{{ locations }}</li>
+        </ol>
+    </div>
+ </div>
+ <script src="../script/district-wise.js"></script>
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+</script>
+
+<footer>
+
+    <p>All Rights Reserved. © www.WonderofAsia.lk</p> 
+ 
+ </footer>
+
+</body>
+</html>

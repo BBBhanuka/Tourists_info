@@ -1,0 +1,100 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Galle Fort - Galle</h1>
+
+<img src="../Img home/12.jpg" width="50%">
+
+
+<h3>History of Galle Fort</h3>
+
+<p>As with most forts in Sri Lanka which were occupied by the three colonial forces; the Portuguese, Dutch and English respectively, the Galle Fort is attributed to the Dutch and called the Dutch Fort in Galle. This is because it was the Dutch who planned, structured and built the Forts in existence today with only minor improvements done by the English in later years. </p>
+<p>The Fort in Galle stands overlooking the Harbour/Port in Galle which is situated on the southwestern coast of Sri Lanka was an integral trade route stopover for Chinese Arab and Mediterranean traders and is mentioned in many ancient texts and by famous travellers from times past such as Ibn Battuta. </p>
+<p>The first contact with the Portuguese and this port was when the Portuguese expedition led by Lourenço de Almeida in the 1500’s touched down here and developed friendships with king Dharmaparakramabahu. They then began construction of the Fort with earthen fortificationsand it went on to finally have three bastions as well as the Franciscan Chapel built within it in 1541. </p>
+<p>This original structure was almost entirely destroyed when the Dutch took over in 1640 with the help of King Raja Singha II who employed locals to help rebuild the Fort according to Dutch design as thanks for ridding the Fort of the Portuguese. The Dutch used the Fort as their main base and made improvements to it until its capture by the English in 1796. It was reconstructed by the Dutch with two portcullises with massive walls ofgranite and coral with 14 bastions which had interesting names such as sun, moon, Aurora, Star, Trechion, Emaloon etc., a church and a moat. The Fort to this day occupies a land area of 130 acres. </p>
+<p>Once the British took over their main base became the Fort in Colombo while the one in Galle became their main southern base and they made a few more changes such as filling the moat, and adding a light house to the bastion called Ultrecht and erecting a tower to commemorate Queen Victoria’s Jubilee. </p>
+<p>Owing to its strength and fortifications it was able to shield a portion of Galle from the Tsunami on the 24th of December 2014. Efforts were made to renovate the Fort while paying much attention to maintain its original texture and architecture. The Galle Fort has been a UNESCO World Heritage site since 1988. </p>
+<h3>Present Day</h3>
+<p>The narrow streets within the Fort are home to many jewellery and souvenir shops, much to the delight of foreign travellers and there are many restaurants catering to western and local palates usually housed in old colonial buildings. </p>
+
+
+
+<p>Some of the notable heritage buildings are the Dutch Reformed Church built in 1640 and its iconic belfry, The Dutch Hospital Galle which has been transformed into a shopping and dining precinct just like the one in Colombo, The Meera Mosque, The All Saints Anglican Church built in 1871, The New Orient Hotel built in 1691 and now renamed to Amangalla, The Galle lighthouse and The Galle Clock Tower. </p>
+<p>This is a must visit destination if you are visiting the southwestern coast of Sri Lanka and experience a preserved slice of history in all its splendour. </p>
+
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

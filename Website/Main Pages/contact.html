@@ -1,0 +1,99 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../css/menu.css">
+<style> 
+
+body {color: white;}
+table button {margin:20px;}
+.Content {
+    height: 83%;
+}
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul type="none">
+<li><a href="../Main Pages/home.html"> Home </a></li>
+<li><a href="../Main Pages/tourists.html"> Tourists Information </a></li>
+<li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+<li id ="active">Contact US </li>
+<li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+<li><a href="../Main Pages/about.html"> About us </a> </li>
+</ul>
+
+</div>
+
+<div class="Content">
+
+<h2>For inquary please fill this form & submit</h2>
+<fieldset>
+<legend>Information</legend>
+<table>
+    <tr>
+        <td>Name :</td>
+        <td><input type="text" id="name"  placeholder ="Enter your name"></td>
+    </tr>
+    <tr>
+        <td>E-mail:</td>
+        <td><input type="text"  id="email" name="email" placeholder ="Enter your Email"></td>
+    </tr>
+    <tr>
+        <td>Messsage:</td>
+        <td><textarea rows="6"  id ="message" cols="50" name="Message" wrap="hard" placeholder ="Message...(Required)"></textarea></td>
+    </tr>
+    <tr>
+        <td>Additional Information:</td>
+        <td><textarea rows="2" cols="50" id="Add_Message" name="Add_Message" wrap="hard" ></textarea></td>
+    </tr>
+    <tr>
+        <td><button onclick="Submit()">Submit</button></td>
+        <td><button onclick="Clear()">Clear</button></td>
+    </tr>
+
+</table>
+
+</fieldset>
+
+</div>
+<script>
+function Submit() {
+
+var x = document.getElementById('name').value;
+var y = document.getElementById('email').value;
+var z = document.getElementById('message').value;
+
+if(x == "" || y == "" || z == "") {
+    window.alert("Please Enter Required Details");
+}
+
+else {
+    window.alert("Your Informations successfully Saved. Thank you for Contacting us");
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('message').value = "";
+        document.getElementById('Add_Message').value = "";
+}
+
+
+}
+
+function Clear() {
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('message').value = "";
+        document.getElementById('Add_Message').value = "";
+}
+
+</script>
+
+
+
+<footer>
+
+    <p>All Rights Reserved. © www.WonderofAsia.lk</p> 
+ 
+ </footer>
+</body>
+</html>

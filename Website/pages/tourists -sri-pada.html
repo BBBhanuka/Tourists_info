@@ -1,0 +1,92 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Sri Pada / Adam's Peak</h1>
+
+<img src="../Img home/15.jpg" width="50%">
+
+<p>Sri Pada or Adam’s Peak is an ancient pilgrimage site, which has long attracted thousands of pilgrims from all faiths. This conical mountain is 7,360 feet (2,250 meters )high, soaring clear above the surrounding mountain ranges. The mountain is located in the southern reaches of the Central Highlands in the Ratnapura District and Nuwara Eliya district of the Sabaragamuwa Province and Central Province —lying about 40 km northeast of the city of Ratnapura and 32 km southwest of the city of Hatton. The surrounding region is largely forested hills, with no mountain of comparable size nearby. </p>
+<p>The region along the mountain is a wildlife reserve, housing many species varying from elephants to leopards, and including many endemic species. The region of Peak Wilderness Sanctuary that encompass the Sri Pada together with Horton Plains National Park and Knuckles Range, all in the Central Highlands of Sri Lanka is recognized as a World Heritage Site in the year 2011. </p>
+
+<p>Sri Pada is derived from Sanskrit, used by the Sinhalese people in a religious context; roughly translated as “the sacred foot”, It refers to the footprint-shaped mark at the summit, which is believed by Buddhists to be that of the Buddha. Christian and Islamic traditions assert that it is the footprint of Adam, left when first setting foot on Earth after having been cast out of paradise, giving it the name “Adam’s Peak”. The legends of Adam are connected to the idea that Sri Lanka was the original Eden, and in the Muslim tradition that Adam was 30 ft tall. Hindu tradition refers to the footprint as that of the Hindu deity Shiva, and thus names the mountain Shiva padam (Shiva’s foot) in Tamil. It is also fabled that the mountain is the legendary mount Trikuta the capital of Ravana during the Ramayana times from where he ruled Lanka. Another Sinhala name for the mountain is Samanalakanda, which refers either to the deity Saman, who is said to live upon and protect the mountain (a shrine dedicated to the deity can be found near the footprint), or to the butterflies (samanalayā) that frequent the mountain during their annual migrations to the region. </p>
+
+<p>The summit of the mountain is a small plateau, and according to measurements it is 74 ft. in length and 24 ft. in breadth. On the top of the Peak broad steps lead up to a walled enclosure containing the rock over which is a tower-like structure. The real footprint on Adam’s Peak is believed to be set in jewels beneath the visible rock. The soles of the Buddha’s feet are said to be flat with all the toes of equal length. On each sole there are one hundred and eight auspicious marks (mangala¬lakkhana), with the wheel (chakra) the principal mark at the centre while around it are grouped figures of animals, inhabitants of various worlds and other kinds of symbols. Access to the Adam’s Peak is possible by 6 trails: Hatton-Nallathanni; Ratnapura-Palabaddala; Kuruwita-Erathna; Murraywatte; Mookuwatte; Malimboda; the most popular routes are the Hatton-Nallathanni&Ratnapura-Palabaddala due to the picturesque views and postcard worthy scenery that can be encountered along them. Once a final node is reached (Nallanthanni or Palabaddala or Erathna), there begins the difficult journey through the jungle on foot. </p>
+<p>Most of the pilgrims use the Hatton route as the journey can be reduced by more than five kilometers even though the slope of this route is much steeper than the others. The greater part of the track leading from the base to the summit consists of thousands of steps built in cement or rough stones. The trails are illuminated with electric light, making night-time ascent possible and safe to do even when accompanied by children. Rest stops and wayside shops along the trails serve refreshments and supplies. On the way up, after a few minutes climb the SamaChatiya, the World Peace Pagoda, can be found.This stupa was built by the famous Japanese Buddhist monk VenNichi Fuji in 1976 and stands out dramatically with the amazing backdrop of Adam’s Peak during the daytime. </p>
+
+<p>The pilgrims’ season to Sri Pada traditionally starts on the full moon of December and ends on the full moon of April, with the crowd increasing during the latter half of the season. During other months it is hard to climb the mountain due to very heavy rain, extreme wind, and thick mist. Most people make the climb by night to reach the mountain top to watch the sun rise over the sea; the sun almost leaps over the eastern horizon drawing a perfect triangle of a shadow of the mountain spreading over the western backdrop of the mountain. As the sun keeps on rising, the shadow shifts towards the base of the mountain until it completely disappears, a grand finale to a breathtaking natural spectacle. Sri Pada is one of the rare places that people of four major religions in the world worship. Devotees of many religions climb the mountain daily to invoke blessings while trekkers enjoy an exhilarating hike through the different access routes to the summit. </p>
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

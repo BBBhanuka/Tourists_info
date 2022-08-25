@@ -1,0 +1,94 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Hikkaduwa Beach - Hikkaduwa</h1>
+
+<img src="../Img home/10.jpg" width="50%">
+
+<p><b>Hikkaduwa </b>is located about 100km south of the Sri Lankan capital, Colombo. The area is well known for its coral sanctuary, the proximity of wonderful scuba diving sites to explore and having a top surfing beach. With its unique beach culture and vibe, Hikkaduwa has long been one of the more popular beach resorts in Sri Lanka. In the centre of Hikkaduwa, a protected lagoon creates a beautiful and safe snorkelling area. Further south, where the currents are stronger, surfing is the dominant water activity. The impressive coral reef runs just offshore and is populated by exotic fish and sea turtles that occasionally come ashore to lay their eggs. </p>
+
+<h3>Eating and Drinking</h3>
+<p>There are many local restaurants, cafes and snack bars within a short walk or tuk tuk journey from the beach house. I espeically recommend the rooftop restaurat at The Riff Hotel, which is just 50 metres along the beach. However, do ask Chandana if you want to have a meal prepared for your group at the beach house. We will need a full day's notice to order in the ingredients but our seafood BBQ is a particularly favourite! </p>
+
+
+<h3>Swimming</h3>
+<p>Warning! The sea currents directly in front of the beach house can be particularly strong and this makes swimming quite dangerous at times. Parents with young children should be very mindful of this. Better to just have a paddle in the sea and use our pool instead. If you want to go swimming in the sea, take a trip to the Coral Sanctuary at Hikkaduwa or go down the coast to Unawatuna where it is more sheltered. </p>
+
+<h3>Diving</h3>
+<p>The diving at Hikkaduwa is diverse and there is an abundance of marine life and shipwrecks to investigate. Manta rays, whale sharks, large groupers, barracudas, moray eels, dogtooth tunas and turtles are regularly sighted just off the coast at Hikkaduwa. A large number of ships have also floundered off this coast over the years, adding to the range of dive sites available. The main diving season in the south west runs from November to April and there are a number of well-established diving centres from which to choose with Blue Deep Diving and Poseidon being probably the best. </p>
+
+<h3>Surfing</h3>
+<p><b>Hikkaduwa </b>is very well known as a surfing destination and it annually attracts surfers from all over the world. There are plenty of good surfing points and although most of them are reef breaks, none of them is risky since they all have a flat deep bottom. The wave size ranges up to 3 metres during the season. The main point, known as the main reef has 'A-frame' shaped waves, which can be surfed in both directions. </p>
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

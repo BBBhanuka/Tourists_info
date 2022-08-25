@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Abayagiri Dagoba - Anurādhapura </h1>
+
+<img src="../Img home/2.jpg" width="50%">
+
+<h3>About The Abhayagiri Dagoba</h3>
+<p>The Abhayagiri Dagoba is a Buddhist shrine in the UNESCO-listed ancient city of Anuradhapura in Sri Lanka.
+Estimated to have been built in the 1st century BCE, the Abhayagiri Dagoba was an important Buddhist monastery of its time and remains a pilgrimage site. </p>
+<h3>The Abhayagiri Dagoba history</h3>
+<p>Believed to be built by King Vaṭṭagāmaṇi Abhaya around in the 1st century BCE, the Abhayagiri Dagoba is an important ancient Theravāda Buddhist monastic centre on the northern side of Anurādhapura, which was the capital of Sri Lanka at that time.
+ It was originally associated with the nearby Mahāvihāra (Great Monastery), which was the traditional centre of religious and civil power at the time. Abhayagiri separated from the Great Monastery toward the end of Vaṭṭagāmaṇi’s reign due to a dispute over the relations between monks and the lay community and the use of Sanskrit works to augment Pāli texts as scripture. </p>
+<p>Originally over 100 metres high, the Abhayagiri Dagoba was one of the greatest structures in the ancient world, its scale only matched by the pyramids of Giza and nearby Jetavanarama.  
+ The name means ‘Hill of Protection’ or ‘Fearless Hill’. The Saddarma Rathnawaliya scripture records that a statue of a golden bull containing relics of the Buddha was buried in the core of the stupa. </p>
+
+
+
+ <h3>The Abhayagiri Dagoba today</h3>
+<p>Over the course of 15 years, the Abhayagiri Stupa was fully restored and renovated by the Sri Lankan Central Cultural Fund as a UNESCO project. It was unveiled in June 2015 with President Maithripala Sirisena and Prime Minister Ranil Wickremesinghe in attendance.
+Today, after several reconstructions Abhayagiri Dagoba soars 75 metres above the forest floor. The shrine is impressive to behold, and features many intricate sculptural details. </p>
+<p>The eastern and western steps of the dagoba feature unusual moon shaped, semicircular, concrete stones with elaborate carvings. The original octagonal spire and shaft that topped the dagoba, before the current square top was placed, can be sighted as you walk around the structure.  
+ The Abhayagiri Museum nearby contains an interesting collection of jewellery, pottery, squatting plates and religious sculptures discovered on the site. </p>
+<h3>Getting to the Abhayagiri Dagoba</h3>
+<p>The Abhayagiri Dagoba is located within the ancient city of Anuradhapura . Some visitors choose to hire a tuk-tuk to travel between sites in the area. </p>
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

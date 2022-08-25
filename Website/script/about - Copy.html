@@ -1,0 +1,44 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "menu.css">
+<script src="vue.js"></script>
+<style> 
+
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+
+<h1> FirstName : {{  Fname }} </h1>
+<h1> LastName : {{  Lname }} </h1>
+
+<h1> My Name is {{Fname}} {{Lname}} </h1>
+
+
+
+</div>
+
+
+<script>
+var data = new Vue({
+el:'#menu',
+
+data:{
+Fname:'Bhanuka',
+Lname:'Chathuranga'
+
+}
+
+
+
+
+
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Seema Malaka Temple - Colombo</h1>
+
+<img src="../Img home/3.jpg" width="50%">
+
+<h3>Overview</h3>
+<p>Standing tall along the banks of Beira Lake, Seema Malaka forms a part of the southern region of the Colombo City of Sri Lanka. It lies in conjunction with the Gangaramaya Temple, which is the main shrine there. Residing on three man-made podiums, Seema Malaka Temple stands unrivaled in both its location and architecture. The architectural allure of this temple is highly inspired from the ancient forest monasteries Ritigala and Anuradhapura. The building of the temple is built in the Kandyan style and is characterized by its hanging blue tiled roofs. There is a pontoon boardwalk that links the premises of the Seema Malaka temple with its mainland. The outer boundary wall of this shrine is adorned by numerous Buddha statues representing different sitting postures. </p>
+
+<p>There are three raised platforms which divide the temple and are connected with the walkways. The four-sided blue roof on the central platform of this temple is quite evident. On the very next platform, you have a statue of the Treasury of Truth which has got its own significance. This platform at the Seema Malaka temple is actually a treasure of ancient Buddhist texts, which is usually stored in locked conditions and is accessible only to the monks. </p>
+
+<p>There are beautiful wooden panels embracing the décor of the central building of this shrine - where people reach out for meditation. In case you have any queries, you may approach the caretakers there. The outer area surrounding this room features several Buddha statues. If you keenly observe them – some of them have their hands placed on their lap, while others are portrayed yogic postures. </p>
+
+<p>At the next platform, you have a Bodhi tree in the central portion, which is all over flanked with several Buddha statues. On special occasions, you can mark the presence of numerous Locals here to venerate the Bodhi tree. Apart from all these, the four corners of the Seema Malaka temple, you also have shrines which are entirely dedicated to the Gods of Hindu religions – Ganesha and Shiva. </p>
+
+
+<p>Dedicated to Lord Buddha, the entire premise of Seema Malaka is a pure sight to behold. Representing a blend of Chinese, Thai, Sri Lankan, and Indian architectural brilliance, your visit to Seema Malaka is really going to be a special one. Here are few noteworthy things which add value to the magnificence of Seema Malaka –</p>
+
+<p><b>1. Central Platform – </b>The Central Platform of Seema Malaka is renowned for its Asian style seated Buddha statues throughout its perimeter. They are phenomenally sculpted and adored for the same. Towards the center, you have a room equipped with slatted wooden walls. Devotees and visitors visiting this place prefer to use it for their meditation and yoga activities. Besides, what makes this place a popular spot amongst tourists is its view. <br>
+
+The moment you peep out through its doors and window panes, you get to witness the unmatched beauty of a nearby lake and its surroundings. You also have a giant Buddha statue here which is flanked with two tusks of a giant elephant. At the entrance of this central platform itself, you have two brilliantly carved guardian statues representing the Anuradhapura style. </p>
+
+<p><b>2. The Northern Platform – </b>The Northern Platform is a sealed one and is renowned as a ‘Treasury of Truth.’ This treasure is actually a library where you have the presence of numerous ancient, medieval, and modern Buddhist texts. However, this place is only accessible to the monks visiting the Seema Malaka. </p>
+
+<p><b>3. The Courtyard –</b> The Courtyard is the central piece of attraction at the Seema Malaka. Towards one of the sides of this Courtyard, you have a Bodhi tree that appears to emerge from a raised platform. The entire surroundings of this raised platform are flanked by prayer flags. There are Buddha statues here of varying sizes. Also, there are small rooms where you have entrances made out of wooden doors. <br>
+
+Inside, you will find the presence of numerous localized versions of the Gods and Goddesses belonging to the Hindu mythology. As soon as you step towards the backside of this Courtyard, you will find a tier that is stacked with stacks of Buddha statues. These statues have been imported straightaway from Thailand. Close to the Courtyard, you have a magnificent collection of old and new vintage cars that have been gifted by well-wishers of Seema Malaka. </p>
+
+<p><b>4. The Museum –</b> On your way out to the entrance of Seema Malaka, there is a museum there. This museum has got two big rooms with some impressive collection of objects. In the collection here, you have some represents their symbolism, some represent their financial values, while others their artistic valor.<br>
+
+To list a few are – ancient Sanskrit Ola Leaf Manuscripts; ivory carvings; sapphires and other precious metals; jade & crystal monstrosities; coins; elephant tusks; and many Buddha images. You also have old stocks, old gramophones, votive pagodas, oil lamps, and sandalwood exhibits here. </p>
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

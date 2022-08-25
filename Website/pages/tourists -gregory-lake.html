@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Gregory Lake - Nuwara Eliya</h1>
+
+<img src="../Img home/16.jpg" width="50%">
+
+
+<p>In the heart of hill country, Gregory Lake is a extremely popular place with both foreign tourists and locals. This is a place to enjoy cool weather. Gregory Lake, is a reservoir in hill city, Nuwara-Eliya, Sri Lanka. Lake Gregory was built by Governor William Gregory between 1872 and 1877.  The park near the lake gives you various activities such speed boat, swan boats, dinky boats, Pony ride and many more. There is also a bicycle path around the lake. Bicycle cost from 100 rupees per hour. The park around it has a walkway and its well maintained. So can take a saunter stroll along the area’s 5 km path. Lot of flowers between walking paths given extra attraction to the park and also small restaurants are situated one side of the park. </p>
+<h3>Things to do at Lake Gregory</h3>
+<p>Lake Gregory was reconstructed and thus it is now turned into a more like Lake Park which includes many recreational activities. The people who visit this place can go on watersports like jet skis, windsurfing, swan-shaped paddle boats, water-walking balls, windsurfing, normal boat rides, pony rides and so much more fun activities. </p>
+<h3>Reaching the destination</h3>
+<h4>From Colombo</h4>
+<p>Follow McCallum Road. Take the Colombo – Katunayake Expressway from Katunayake and exit on to Yakkala – Radawana Road. Take Avissawella – Hatton – Nuwara Eliya Highway, Peradeniya-Badulla-Chenkaladi Highway in Nuwara Eliya. </p>
+<h4>From Nuwara Eliya</h4>
+<p>Head northwest on Peradeniya-Badulla-Chenkaladi Highway and the destination will be on the right. </p>
+<h3> Charges for the entrance tickets and activities</h3>
+<p><b>Ticket price : </b>  Rs.20 for Locals and Rs. 200 for foreigners</p>
+<p><b>Bicycle cost : </b>  Rs. 100 per hour</p>
+<p><b>Swan-shaped pedal boat : </b>  Rs. 500 for 30 minutes</p>
+<p><b>Trotting around on a Pony : </b>  Rs. 300 for 15 minutes</p>
+<h4 style="background-color:rgb(107, 85, 43);"> * (Note that :  sometimes prices might be differ.) </h4>
+<p><b>Location : </b>  Nuwara-Eliya, Sri Lanka</p>
+<p><b>Built : </b>  1872</p>
+<p><b>Surface area : </b> 91.2 ha (225 acres) </p>
+<p><b>Surface elevation : </b> 1,874 m (6,184 ft) </p>
+<p>Gregory lake is vast in area, fully surrounded by hills, Overall average when it comes to an attraction. You can feel cool and calm air always. Just a view visit is recommended.
+</p>
+
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,336 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../css/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../css/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../css/style1.css">
+
+<script  src = "../script/vue.js"></script>
+
+<style> 
+
+#district-wise {
+    color:white;
+}
+
+
+
+</style> 
+<title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+<li><a href="../Main Pages/home.html"> Home </a></li>
+<li id ="active"> Tourists Information </li>
+<li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+<li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+<li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+<li><a href="../Main Pages/about.html"> About us </a> </li>
+</ul>
+
+</div>
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+</script>
+
+
+<div id = "Tour-Content">
+    <h1>Sri Daalada Maligawa</h1>
+    <img src="../Img home/1.jpg" width="20%">
+
+    <div class="text">
+        <p>
+            The Dalada Maligawa, also known as, the Temple of the Tooth, is one of the landmark sites in the city of Kandy.
+            It is located in the heart of Kandy town surrounded by the lake and the commercial district.
+            The Maligawa was once the royal palace inhabited by the king and his consorts, 
+            but after the demise of the Kandyan Kingdom the palace was transformed into a Buddhist temple that holds Buddha’s tooth.</p>
+            <p>
+            It is a must visit location for all tourists. Visitors can catch a glimpse of Buddhist rituals, explore the museum that 
+            includes several ancient artifacts, and pay your tribute to the tooth relic at one of the Buddhist ceremonies held at the premises. 
+            </p>
+        
+            <a href = "../pages/tourists -sri-dalada-maligawa.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Abhayagiri Dagoba </h1>
+    <img src="../Img home/2.jpg" width="20%">
+
+    <div class="text">
+        <p>
+            The Abhayagiri Dagoba is a Buddhist shrine in the UNESCO-listed ancient city of Anuradhapura in Sri Lanka. Estimated to have been built in the 1st century BCE,
+             the Abhayagiri Dagoba was an important Buddhist monastery of its time and remains a pilgrimage site.</p>
+            
+                    
+            <a href = "../pages/tourists -abayagiri-dagoba.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Seema Malaka Temple - Colombo </h1>
+    <img src="../Img home/3.jpg" width="20%">
+
+    <div class="text">
+        <p>
+            Standing tall along the banks of Beira Lake, Seema Malaka forms a part of the southern region of the Colombo City of Sri Lanka. 
+            It lies in conjunction with the Gangaramaya Temple, which is the main shrine there.
+             Residing on three man-made podiums, Seema Malaka Temple stands unrivaled in both its location and architecture. 
+             The architectural allure of this temple is highly inspired from the ancient forest monasteries Ritigala and Anuradhapura.</p> 
+             <p>The building of the temple is built in the Kandyan style and is characterized by its hanging blue tiled roofs. 
+             There is a pontoon boardwalk that links the premises of the Seema Malaka temple with its mainland. 
+            The outer boundary wall of this shrine is adorned by numerous Buddha statues representing different sitting postures.</p>
+            
+                    
+            <a href = "../pages/tourists -Seema-malaka-temple.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Galle Face - Colombo </h1>
+    <img src="../Img home/4.jpg" width="20%">
+
+    <div class="text">
+        <p>
+            Sri Lanka, being an island, is known for her amazing beaches and views of the sea.
+            However, in Colombo,it isn’t always easy to find a place where you can enjoy the crashing of the waves and most of all, an undisturbed view of the sunset. 
+            Galle Face Green thus attracts a large number of people, especially during the evening, although it is rarely empty, even in the afternoon when there is very little shelter from the scorching sun.
+        </p>
+        <p>
+            Galle Face Green (Galle Face Beach) is a half kilometer promenade in the heart of Colombo and was initially laid out in 1859 by Sir Henry Ward, Governor of British Ceylon. The stretch of land was used for horse racing and golf and was known as the Colpetty Race Course.
+        </p>
+                    
+            <a href = "../pages/tourists -galle-face-colombo.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Udawalawe National Park - Udawalawe </h1>
+    <img src="../Img home/5.jpg" width="20%">
+
+    <div class="text">
+        <p>Udawalawe National Park, the sixth largest animal sanctuary of Sri Lanka is located 180 km from Colombo in south-central sector of the island.
+        The entrance to Udawalawe National Park is located near 11km post between Timbolketiya and Tanamanwila on Pelmadulla-Timbolketiya A18 road.</p>
+
+<h3>Climate at the Udawalawe National Park</h3>
+
+<p>Dry Monsoon forest with an annual rainfall is about 1520mm has mean day & night temperature are 29 & 24 degrees centigrade respectively.
+The Landscape of Udawalawe National Park</p>
+                    
+             <a href = "../pages/tourists -udawalawe-national-park.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Yala National Park - Hambantota & Monaragala </h1>
+    <img src="../Img home/6.jpg" width="20%">
+
+    <div class="text">
+        <p><b>Yala National Park</b> (also known as <b> Ruhuna National Park</b> ) is located in the south eastern region of Sri Lanka and extends over two provinces of Hambantota district of southern province and Monaragala district in Uva province. The entrance to the park is at Palatupana, 12km from Kirinda. The distance from Colombo to the entry point of Palatupana is 305 km. </p>
+<p>The gateway to Yala National Park is Tissamaharama. A 20 km drive via Kirinda takes the visitors to the Palatupana. At Palatupana, the well-designed visitor center provides the information to the tourists and assign a tracker to all incoming vehicles. </p>
+             <a href = "../pages/tourists -yala-national-park.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Buddhist Ruins in Polonnaruwa - Polonnaruwa Vatadage</h1>
+    <img src="../Img home/7.jpg" width="20%">
+
+    <div class="text">
+        <p>The Vatadage, located at Polonnaruwa Ancient City, is yet another work of wonderful art that gets an exalted position in the annals of local history. It is this par excellence in vatadage design. In fact it gives the modern audience an incredible view of what a complete vatadage would actually have looked like. However it is lacking a roof, which would have been a large dome, judging by the curvature of the walls at least. There is some doubt concerning the sponsor of this building. It might even have been a flattened roof with curved edges, but one can reconstruct this structure any way they please, given that it is within the realms of historical feasibility. Tiles have been found in the vicinity of this building. </p>
+        <a href = "../pages/tourists -buddhist-ruins-pollonnaruwa.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Bundala National Park</h1>
+    <img src="../Img home/8.jpg" width="20%">
+
+    <div class="text">
+            <p> 
+             Bundala National Park is located 251 km southeast of Colombo, close to the City of Hambantota in the Southern Province of Sri Lanka.
+            </p>
+            <p>
+                The general climate of Bundala National Park is hot and dry. While the average Temperature is 27 degrees Celsius, the annual rainfall varies between 900mm to 1300mm. Dry season’ falls between May and September.Best time to visit is September to March: during this period migratory birds arrive at the park.
+            </p> 
+         <a href = "../pages/tourists -bundala-national-park.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Nine Arch Bridge - Demodara</h1>
+    <img src="../Img home/9.jpg" width="20%">
+
+    <div class="text">
+        <p>
+            The Nine Arch Bridge  also called the Bridge in the Sky,  is a viaduct bridge in Sri Lanka. It is one of the best examples of colonial-era railway construction in the country. 
+            The construction of the bridge is generally attributed to a local Ceylonese builder, P. K. Appuhami, in consultation with British engineers. The chief designer and project manager of the 'upcountry railway line of Ceylon' project was D. J. Wimalasurendra, a distinguished Ceylonese engineer and inventor.
+        </p> 
+         <a href = "../pages/tourists -nine-arch-bridge.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Hikkaduwa Beach - Hikkaduwa</h1>
+    <img src="../Img home/10.jpg" width="20%">
+
+    <div class="text">
+        <p><b>Hikkaduwa </b>is located about 100km south of the Sri Lankan capital, Colombo. The area is well known for its coral sanctuary, the proximity of wonderful scuba diving sites to explore and having a top surfing beach. With its unique beach culture and vibe, Hikkaduwa has long been one of the more popular beach resorts in Sri Lanka. In the centre of Hikkaduwa, a protected lagoon creates a beautiful and safe snorkelling area. Further south, where the currents are stronger, surfing is the dominant water activity. The impressive coral reef runs just offshore and is populated by exotic fish and sea turtles that occasionally come ashore to lay their eggs. </p>
+
+         <a href = "../pages/tourists -hikkaduwa-beach.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Tangalle Beach - Tangalle</h1>
+    <img src="../Img home/11.jpg" width="20%">
+
+    <div class="text">
+        <p>With white sandy shoreline and turquoise waters, <b>Tangalle Beach </b> is much like a dream. The white sands, palm groves and the lovely waters, set in a tropical environment is the perfect getaway from the wintertime blues. Located in the south east end of Sri Lanka, Tangalle is the last town within the Sri Lankan border and is home to wide open beaches. Tangalle Beach is the farthest beach in this region and at a 4 hrs. drive away from Colombo. </p>
+
+        <a href = "../pages/tourists -tangalle-beach.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Galle Fort - Galle</h1>
+    <img src="../Img home/12.jpg" width="20%">
+
+    <div class="text">
+        <p>As with most forts in Sri Lanka which were occupied by the three colonial forces; the Portuguese, Dutch and English respectively, the Galle Fort is attributed to the Dutch and called the Dutch Fort in Galle. This is because it was the Dutch who planned, structured and built the Forts in existence today with only minor improvements done by the English in later years. </p>
+
+        <a href = "../pages/tourists -galle-fort.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1>Hortan Plains National Park</h1>
+    <img src="../Img home/13.jpg" width="20%">
+
+    <div class="text">
+        <p>Horton Plains in Sri Lanka, is the coldest and windiest location in the country. It consists of ecosystems such as Montane evergreen forests, grasslands, marshy lands and aquatic ecosystem. At an altitude of 2,100 meters above sea level, Horton Plains spreads across over 3,169 hectares of the highest tableland of the island. In view of the large number of endemic flora and fauna species, Horton Plains was declared a UNESCO World Heritage Site on 30th July 2010. </p>
+
+        <a href = "../pages/tourists -horton-plains.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1> Sigiriya Rock Fortress</h1>
+    <img src="../Img home/14.jpg" width="20%">
+
+    <div class="text">
+        <p>Sigiriya Rock Fortress of Sri Lanka is considered by the local population as the 8th Wonder of the World, retroflex ancient City Planning, Hydraulic Technology, Defense, Arts, Garden landscaping and Engineering around 5th Century AD. Called also as the "Lion Rock" it reaches a height of 200 meters from the surrounding landscape. Sigiriya is located at Matale district near Dambulla. It can be reached along Colombo- Habarana highway by turning towards east from Inamaluwa. Proceeding about 10 km from Inamaluwa and passing Kimbissa township one arrives at Sigiriya. </p>
+
+        <a href = "../pages/tourists -sigiriya-rock.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+<div id = "Tour-Content">
+    <h1> Sri Pada / Adam's Peak</h1>
+    <img src="../Img home/15.jpg" width="20%">
+
+    <div class="text">
+        <p>Sri Pada or Adam’s Peak is an ancient pilgrimage site, which has long attracted thousands of pilgrims from all faiths. This conical mountain is 7,360 feet (2,250 meters )high, soaring clear above the surrounding mountain ranges. The mountain is located in the southern reaches of the Central Highlands in the Ratnapura District and Nuwara Eliya district of the Sabaragamuwa Province and Central Province —lying about 40 km northeast of the city of Ratnapura and 32 km southwest of the city of Hatton. The surrounding region is largely forested hills, with no mountain of comparable size nearby. </p>
+<p>The region along the mountain is a wildlife reserve, housing many species varying from elephants to leopards, and including many endemic species. The region of Peak Wilderness Sanctuary that encompass the Sri Pada together with Horton Plains National Park and Knuckles Range, all in the Central Highlands of Sri Lanka is recognized as a World Heritage Site in the year 2011. </p>
+
+        <a href = "../pages/tourists -sri-pada.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+<div id = "Tour-Content">
+    <h1> Gregory Lake - Nuwara Eliya</h1>
+    <img src="../Img home/16.jpg" width="20%">
+
+    <div class="text">
+        <p>In the heart of hill country, Gregory Lake is a extremely popular place with both foreign tourists and locals. This is a place to enjoy cool weather. Gregory Lake, is a reservoir in hill city, Nuwara-Eliya, Sri Lanka. Lake Gregory was built by Governor William Gregory between 1872 and 1877.  The park near the lake gives you various activities such speed boat, swan boats, dinky boats, Pony ride and many more. There is also a bicycle path around the lake. Bicycle cost from 100 rupees per hour. The park around it has a walkway and its well maintained. So can take a saunter stroll along the area’s 5 km path. Lot of flowers between walking paths given extra attraction to the park and also small restaurants are situated one side of the park. </p>
+
+        <a href = "../pages/tourists -gregory-lake.html" ><h4>Continue Reading...</h4></a>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <p>All Rights Reserved. © www.WonderofAsia.lk</p> 
+ 
+ </footer>
+
+</body>
+</html>
+
+
+

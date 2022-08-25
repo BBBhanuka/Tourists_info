@@ -1,0 +1,92 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Buddhist Ruins in Polonnaruwa - Polonnaruwa Vatadage</h1>
+
+<img src="../Img home/7.jpg" width="50%">
+
+<p>The Vatadage, located at Polonnaruwa Ancient City, is yet another work of wonderful art that gets an exalted position in the annals of local history. It is this par excellence in vatadage design. In fact it gives the modern audience an incredible view of what a complete vatadage would actually have looked like. However it is lacking a roof, which would have been a large dome, judging by the curvature of the walls at least. There is some doubt concerning the sponsor of this building. It might even have been a flattened roof with curved edges, but one can reconstruct this structure any way they please, given that it is within the realms of historical feasibility. Tiles have been found in the vicinity of this building. </p>
+<h3> Builder of the Polonnaruwa Vatadage </h3>
+<p>One theory tells us that it was a creation by Parakramabahu I. Historian H.C.P. Bell believes that it is the one mentioned simply as the circular shrine in the Chulavamsa, continuation of the great chronicle of Sri Lankan history. There is another idea, put forward in the book Pujavaliya, a semi-historical work that includes both old stories and actual events that occurred sometime before its penning down in the 13th Century. This second text adds that it is by Nissankamalla during his mad building spree. Yet Wilhelm Geiger, who translated the great chronicle and historian H.W. Codrington both refute this claim, adding that the later king Nissankamalla only renovated a small part of the front porch. Another idea puts forward the idea that the king’s general had it constructed. </p>
+
+<h3>Purpose of the Vatadage</h3>
+<p>The vatadage has a small stupa in it. Possibly used to enshrine the Tooth Relic, or the Alms Bowl Relic of the Buddha. These were the symbols of Lankan kingship and were always enshrined within a special temple. Today the Tooth Relic it located in Kandy Temple. Whoever sponsored the building of this monument. The Polonnaruwa Vatadage is among the most impressive protective buildings, or vatadage in Sri Lanka. But it was not exactly the largest one. However the ornate appearance of this structure, with its brick outer walls surrounding a pair of large stone platforms of stone with a network of pillars surrounding them. The large vatadage is made of three concentric circles. There are four Buddha images and staircases facing the four cardinal directions. They are each milky white as they sit in meditation on their platforms, backing the little stupa in the center. </p>
+<h3>The Moonstone</h3>
+<p>At the northern entrance of the structure is an incredible moonstone, carved in the traditional Polonnaruwa style. By this time Hindu culture was well integrated into the Sri Lankan social system, and thus the arts showed this too. The moonstones of Anuradhapura had four animals, a bull, a horse, a lion and an elephant. The bull, being sacred to the Hindus however, was removed during Polonnaruwa times. The guardian stones, with their godly naga images are also among the best in the island. </p>
+
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

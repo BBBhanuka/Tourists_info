@@ -1,0 +1,30 @@
+
+#flag           { 
+    padding-left:180px; padding-right:20px;
+}
+#government-logo{ 
+    padding-left:40px; padding-right:20px;
+}
+#gen-info       {
+    font-weight:bold;
+}
+#General        { 
+    position: relative;
+    text-align: center;
+    background-color:skyblue; 
+    border: 2px solid red; 
+    margin-bottom:20px; 
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px;
+    display: none;
+    z-index: 5;
+
+
+}
+#General ol     {
+    text-align: left;
+    margin-left: 20%;
+}

@@ -1,0 +1,45 @@
+#app-todo 		{	 position:fixed;
+					 width:15%;
+					 height: 80%;
+					 background:red;
+					 right:5px;
+					 top:70px;
+					 overflow: auto;
+					 border: 2px dotted yellow;
+					 
+					 
+				}
+				
+#app-todo input {
+					margin-left:50px; 
+					width: 50%;
+					height:5%;
+					font-size: 15px;
+				}
+
+
+#app-todo ol 
+				{
+					position:relative;
+					right: 70px;
+					margin-left: 40%;
+					font-family:cursive;
+					font-size: 12px;
+					font-weight: bold;
+					color:yellow;
+					margin-top:40px;
+					text-align:left;
+}
+
+#app-todo ol li {	
+					color:skyblue;
+					font-size: 18px;
+				}
+
+#app-todo button {
+					position:relative;
+					margin-left:65px;
+					margin-top: 10px;
+				
+					font-size: 12px;
+				}

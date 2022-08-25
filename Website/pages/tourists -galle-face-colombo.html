@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Galle Face - Colombo</h1>
+
+<img src="../Img home/4.jpg" width="50%">
+
+    <p>
+        Sri Lanka, being an island, is known for her amazing beaches and views of the sea.
+        However, in Colombo,it isn’t always easy to find a place where you can enjoy the crashing of the waves and most of all, an undisturbed view of the sunset. 
+        Galle Face Green thus attracts a large number of people, especially during the evening, although it is rarely empty, even in the afternoon when there is very little shelter from the scorching sun.
+    </p>
+    <p>
+        Galle Face Green (Galle Face Beach) is a half kilometer promenade in the heart of Colombo and was initially laid out in 1859 by Sir Henry Ward, Governor of British Ceylon. The stretch of land was used for horse racing and golf and was known as the Colpetty Race Course.
+    </p>
+    <p>
+        Today, Galle Face Green is a favorite place for families, children, lovers and picnickers. 
+        While the hot sun makes carrying around an umbrella a must and the crows are a nuisance, it is still a beautiful place to relax, enjoy the beach and have meals. There is enough space to walk around, sit and even fly kites.
+        During the kite season, the skies over Galle Face Green are hidden behind the colorful kites that bring joy to the young and old. Those who enjoy people watching will be able to do a lot of observing at Galle Face Green, as it attracts people of various cultures, ethnicities and ages.
+    </p>
+
+    <p>
+        There are many stalls along the beach and they offer food, drinks, kites, toys, trinkets and many other goodies.
+         The variety of wadey (a popular fried snack) like those with prawns (Isso Wadey) are sold at low prices and the achcharu (pickle) is always perfectly sweet and spicy. 
+         It is advisable to first walk along the strip of kiosks to know the variety of food and drink before making a purchase.
+         However, if you are worried about the sanitary conditions of these stalls, there are many restaurants close by where you could enjoy a meal.
+    </p>
+
+    <p>
+        Galle Face Hotel, The Shangi-La Colombo, The Kingsbury, Galadari Hotel, Taj Samudra Colombo and Hilton Colombo are all within walking distance.
+        The Dutch Hospital is also in the area and there are many restaurants where one can enjoy a meal and the restaurants offer various cuisines so there are many options to choose from. 
+        Three wheelers and buses constantly go past Galle Face Green, so you won’t have your options limited to restaurants that are close to the promenade and you can also enjoy the thrilling experience of traveling by tuktuk or bus.
+    </p>
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

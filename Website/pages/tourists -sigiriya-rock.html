@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Sigiriya Rock Fortress</h1>
+
+<img src="../Img home/14.jpg" width="50%">
+
+<h3>Sigiriya Rock Fortress of Sri Lanka's History</h3>
+<p>Sigiriya Rock Fortress of Sri Lanka is considered by the local population as the 8th Wonder of the World, retroflex ancient City Planning, Hydraulic Technology, Defense, Arts, Garden landscaping and Engineering around 5th Century AD. Called also as the "Lion Rock" it reaches a height of 200 meters from the surrounding landscape. Sigiriya is located at Matale district near Dambulla. It can be reached along Colombo- Habarana highway by turning towards east from Inamaluwa. Proceeding about 10 km from Inamaluwa and passing Kimbissa township one arrives at Sigiriya. </p>
+<p>Sigiriya history is well cronicled and before Sigiriya became a Kingdom, Sigiriya Rock base and the places such as Pidurangala which were endowed with many caves and a temple had been dwelled by Buddhist monks from around 3rd Century BC. It is also found that these areas had been inhabitant by people prior to King Kassapa's rein. Many caves have Brahmi Inscriptions dating back from 3rd Century BC to 1st century AD. </p>
+<p>After King Mahanama who ruled Anuradhapura from 410- 432 AD, a prince named Dhatusena became the King of Anuradhapura in 459 AD, defeating the Indian invader 'Pandu'. King Dhatusena was the ruler who constructed Kala Wewa or the Kala Wewa Tank, by building a dam across Kala Oya , which is a small river type. The man-made 54 mile long Yoda Ela, which takes water from Kala Wewa to Tissa Wewa is considered as an Irrigation engineering wonder even at the present day. It has a gradient of 6 inches per mile along the first 17 miles , which means the level different is just over 8 feet even after the first 17 miles along the canal. The high level of Water technology knowledge during this period can be assessed from the construction work that remains still in working condition. During this king's rein the famous full-relief Aukana Buddha statue was constructed out of a rock which stands 42 feet high depicting the art and craft of stone sculpturing. </p>
+<p>He had two sons from two of his queens. Mugalan [ also called as Moggallana ] from the head queen and Kassapa's [ also called as Kashyapa ] from a companion queen. Prince Kashyapa, with the help of the general of the army of King Dhatusena, named Migara, got his father killed and became the King. Prince Mugalan, fearing for his life, escaped to India. The Buddhist Bhikkus and the people were against his conduct and favoured Price Mugalan for the rulership. Fearing that Mugalan will come with an army from India to avenge him at a later day, King Kashyapa decided to make Sigiriya as his kingdom. During his rule of eighteen years from 477 AD to 495 AD Sigiriya Kingdom was created. It is believed that he sought the refuge of Sigiriya rock for his safety fearing for his life. </p>
+<p>After 18 years, Prince Mugalan came with an army from India to fight with King Kassapa. During the battle Kashyapa killed himself thus Mugalan became the King. He went back to Anuradhapura and ruled the country from there and handed over Sigiriya back to the Buddhist priests. Sigiriya as a Kingdom was abandoned in around 1150 AD and was almost forgotten for the next seven centuries. Though King Kashyapa is not regarded in high esteem in Sri Lankan history due to his dubious conduct, he is credited as the ruler with unsurpassed imagination put into reality to create a Sri Lankan style marvel of high caliber art and engineering construction skills that could even challange the other world structures at that time, which definitely is amazing even in the 21st century with whatever is remaining as ruins of Sigiriya Kingdom thus considering Sigiriya as the Eighth wonder of the World. </p>
+<h3>Art and Engineering of Sigiriya</h3>
+<p>The Sigiriya Rock Fortress itself has its unique identity due to its shape not found anywhere else in the island and can be recognized miles away from the distance.
+Sigiriya was rediscovered during the rule of the British, by Major H. Forbes in 1831. Climbing to the Sigiriya summit was achieved by A.H.Adams and J.Bailey in 1853. </p>
+<p>Sigiriya Rock Fortress being the citadel fortress, had been well designed for its defenses by having ramparts and moats built around it. There are several approaches to the inner city and the most prominent is the Western entrance. From the summit of the rock, the land areas up to distances of tens of miles can be watched making it hard for the enemy to make a surprise attack to the kingdom. </p>
+<p>King Kassapa had reverted his fortress to an ecological wonder by having Royal Pleasure Gardens, Water Gardens , Fountain Gardens and Boulder Gardens made inside the inner city as well as at the palace premises on the Rock summit. Employment of Water Technology had been tremendous since there are water fountains that are manmade and that are still working. Also there are Ponds in rock summit considered to be filled with water from a lower elevation. </p>
+<p>The most renowned is the Sigiriya Frescoes of Sigiri Damsels locally called as 'Sigiri Apsaras' painted on a Western Rock face cavity about 100 meters high from the rock base .There now remains around 21 paintings of Sigiriya Frescoes but there had been around five hundred paintings during King Kassapa's time along several other places of the same Western Rock face. </p>
+
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

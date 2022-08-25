@@ -1,0 +1,93 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Tangalle Beach - Tangalle</h1>
+
+<img src="../Img home/11.jpg" width="50%">
+
+<p>With white sandy shoreline and turquoise waters, <b>Tangalle Beach </b> is much like a dream. The white sands, palm groves and the lovely waters, set in a tropical environment is the perfect getaway from the wintertime blues. Located in the south east end of Sri Lanka, Tangalle is the last town within the Sri Lankan border and is home to wide open beaches. Tangalle Beach is the farthest beach in this region and at a 4 hrs. drive away from Colombo. </p>
+<p>Since the beach is located in an isolated area, it serves as the perfect retreat for relaxing away from the hustle of the city. There are many other beaches near Tangalle beach in Sri Lanka, which you can visit on day trips from Tangalle Beach.This spit of land on the edge of the Indian Ocean is lined with mangrove vegetation with many beautiful lagoons. This beach attracts a lot of budget travelers and visitors throughout the year. The cozy accommodations combined with the sublime surroundings, makes Tangalle Beach a perfect holiday destination. </p>
+<h3>About Tangalle Beach</h3>
+<p> Tangalle Beach is the perfect place to go for a peaceful and quiet vacation. The beautiful white sand beach will give you the true vibes of a tropical paradise. The white sands goes on for kilometers at a stretch with bays and beaches on both the north and south sides. </p>
+<p> Tangalle, originally, was a fishing village, which suffered hugely during the tsunami in 2004 and they have been rebuilding since. Though the beaches and bays here are really breathtaking, but it doesn’t attract too many tourists, making it a perfect peaceful getaway. </p>
+<p> The beach offers some of the most spectacular views of the sunset. Though the water is deep blue and pretty, swimming at Tangalle Beach is not suitable as the tides can be quite rough and it can be quite dangerous. The small bay with a sheltering reef, is one of the places that you should definitely visit. The reef catches the bigger waves and it acts like a natural Jacuzzi. The soft sands of the beach also make it an ideal spot for a nice morning run. </p>
+<p> Along the Tangalle beach, restaurants and cafes are lied in large numbers and you can grab a bite or a drink, while enjoying at the beach. Tangalle beach is brimming with potential for tourism and it may very well be a part of future tourism in Sri Lanka. </p>
+<h3>Best Time To Visit Tangalle Beach</h3>
+
+<p> The best time to visit the Tangalle Beach is during the winter months of November until April. The beach is in the best of its glory during this time. You can also visit this beach in summer during May till October, which is when the beach is very peaceful as not many people visit this place during off season, although the sea might be in rough conditions at this time. <p>
+
+
+
+
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

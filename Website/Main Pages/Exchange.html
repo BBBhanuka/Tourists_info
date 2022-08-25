@@ -1,0 +1,117 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../css/menu.css">
+<script  src = "../script/vue.js"></script>
+<script  src = "../script/currency.js"></script>
+<style> 
+
+#Currency_Rate{
+    Color:white;
+}
+
+table tr td {
+    color:beige;
+    font-size: 18px;
+    
+}
+
+#Currency_Rate p {
+    font-size: 18px;
+}
+
+fieldset {
+    height: 40%;
+}
+
+table {
+    padding: 1%;
+}
+
+
+#footer {
+    bottom: 10px;
+    position: absolute;
+    color:blue;
+    display: inline-block;
+    background-color:crimson;
+    text-align: center;
+    height: 7%;
+    width: 99%;
+    
+}
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+<li><a href="../Main Pages/Home.html"> Home </a></li>
+<li><a href="../Main Pages/tourists.html"> Tourists Information </a></li>
+<li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+<li><a href="../Main Pages/contact.html"> Contact US </a></li>
+<li id ="active">Exchange Rates </li>
+<li><a href="../Main Pages/about.html"> About us </a> </li>
+
+</ul>
+
+</div>
+
+<div id="Currency_Rate">
+<h1 style ="color:yellow">Currency Rates</h1>
+
+<h2 style ="color:yellow">Select your Currency type and enter amount</h2>
+
+<fieldset>
+    <legend>Exchange Rates</legend>
+<table> 
+    <tr>
+        <td>Amount in Foreign Currency:</td>
+        <td><input type="text" placeholder="Enter your amount" id="input" style="width: 200px" /></td>
+    </tr>
+    <tr>
+        <td>Select your Currency Type:</td>
+        <td><select id="dropdown" onchange="display_info(); withoutclick();" style="width: 200px">
+            <option disabled selected> Select a Currency</option>
+            <option value="USD" selected>US dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="JPY">Japanese yen (JPY)</option>
+            <option value="GBP">Pound sterling (GBP)</option>
+            <option value="AUD">Australian dollar (AUD)</option>
+            <option value="CAD">Canadian dollar (CAD)</option>
+            <option value="CHF">Swiss franc (CHF)</option>
+            <option value="CNH">Chinese Yuan (CNH)</option>  
+            </select>
+        </td>
+    </tr>
+
+</table>
+<br>
+<br>
+
+
+
+<button onclick="Calculate()"> Calculate</button>
+
+
+<button onclick="Clear()"> Clear</button>
+
+
+<h1 id="test"></h1>
+
+<p id="out2" style="color:chartreuse"></p>
+<p id="out3"></p>
+<p id="out1"> </p>
+</fieldset>
+
+</div>
+
+
+
+<div id="footer">
+
+    <p>All Rights Reserved. © www.WonderofAsia.lk</p> 
+ 
+</div>
+
+
+</body>
+</html>

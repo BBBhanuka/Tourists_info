@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel = "stylesheet" type ="text/css" href = "../CSS/menu.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/app-todo.css">
+<link rel = "stylesheet" type ="text/css" href="../CSS/style2.css">
+<script src="../script/vue.js"></script>
+<style> 
+
+
+
+
+</style> <title> Wonder of Asia </title></head>
+<body>
+<div id ="menu">
+<ul>
+    <li><a href="../Main Pages/home.html"> Home </a></li>
+    <li id ="active"> Tourists Information </li>
+    <li><a href="../Main Pages/tourists-des.html"> Tourists Destinations </a></li>
+    <li><a href="../Main Pages/contact.html"> Contact US </a> </li>
+    <li><a href="../Main Pages/Exchange.html">Exchange Rates</a></li>
+    <li><a href="../Main Pages/about.html"> About US </a> </li>
+</ul>
+
+</div>
+
+<div class="Main-content">
+
+<h1 style="color:wheat;"> Nine Arch Bridge - Demodara</h1>
+
+<img src="../Img home/9.jpg" width="50%">
+
+<p>The Nine Arch Bridge  also called the Bridge in the Sky,  is a viaduct bridge in Sri Lanka. It is one of the best examples of colonial-era railway construction in the country. The construction of the bridge is generally attributed to a local Ceylonese builder, P. K. Appuhami, in consultation with British engineers. The chief designer and project manager of the 'upcountry railway line of Ceylon' project was D. J. Wimalasurendra, a distinguished Ceylonese engineer and inventor. The designer of the viaduct was Harold Cuthbert Marwood of Railway Construction Department of Ceylon Government Railway. The 1923 report titled "Construction of a Concrete Railway Viaduct in Ceylon" published by the Engineering Association of Ceylon has details of all the records including the plans and drawings. <br> 
+
+    It is located in Demodara, between Ella and Demodara railway stations. The surrounding area has seen a steady increase of tourism due to the bridge's architectural ingenuity and the profuse greenery in the nearby hillsides <br>
+    
+    Popular rumours suggest that when construction work commenced on the bridge, the Great War began between the empires of Europe and the steel assigned for this site was reallocated to Britain's War related projects at the battlefront. As a result, the work came to a standstill, leading the locals to build the bridge with stone bricks and cement, but without steel.
+
+<h3> How to get to the Nine Arch Bridge</h3>
+
+<p>You have multiple options and ways to reach the train bridge. Follow the road towards Little Adam’s Peak and turn left at the small colored temple. Follow Lake Front Cottage on Google Maps</p>
+<p>For a more quiet walk in between the jungle, turn left into the jungle at the parking spots after Art Cafe Umbrella. From here, you have to follow the path for about 10 minutes which gives you a unique view over the bridge. We highly recommend this path.</p>
+<p>The quickest way is to walk along the track from Ella town until you reach a tunnel. After passing the tunnel, you immediately reach the Nine Arch Bridge.</p>
+<p>The easiest way to get to the Nine Arch Bridge is by a 400 LKR (2 USD) tuk-tuk ride from Ella. To save time, ask them to drop you off near the tunnel and walk to the bridge the last piece.</p>
+
+</div>
+
+
+
+
+ <div id = "app-todo" >
+    <h1 style="text-align: center; color:yellow;">TO-DO List</h1>
+    <input type="text" ref="input" v-on:keyup.enter="Addtodo">
+    <button @click="Addtodo" >Add to List</button>
+        <ol>
+        <li v-for="listtodo in listtodo"> {{ listtodo }}</li>
+        </ol>
+ </div>
+    
+ <script>
+      new Vue({
+
+        el: '#app-todo', 
+             data: { 
+              listtodo: []    
+                    },
+
+methods: { 
+     Addtodo:function(){
+
+         if(this.$refs.input.value == '') {
+
+            alert('Please Enter some data in input field');
+        }
+        else {
+            this.listtodo.push(this.$refs.input.value);
+            this.$refs.input.value = '';
+        }
+    }
+},    
+});
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
